@@ -1,5 +1,5 @@
 class PongsController < ApplicationController
-  before_action :set_pong, only: [:show, :edit, :update, :destroy]
+  before_action :set_pong, only: [:show ]
 
   # GET /pongs
   # GET /pongs.json
@@ -7,35 +7,7 @@ class PongsController < ApplicationController
     @pongs = Pong.all
   end
 
-  # GET /pongs/1
-  # GET /pongs/1.json
-  def show
-  end
 
-  # GET /pongs/new
-  def new
-    @pong = Pong.new
-  end
-
-  # GET /pongs/1/edit
-  def edit
-  end
-
-  # POST /pongs
-  # POST /pongs.json
-  def create
-    @pong = Pong.new(pong_params)
-
-    respond_to do |format|
-      if @pong.save
-        format.html { redirect_to @pong, notice: 'Pong was successfully created.' }
-        format.json { render :show, status: :created, location: @pong }
-      else
-        format.html { render :new }
-        format.json { render json: @pong.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # PATCH/PUT /pongs/1
   # PATCH/PUT /pongs/1.json
