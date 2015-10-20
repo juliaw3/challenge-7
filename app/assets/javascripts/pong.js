@@ -33,6 +33,7 @@ var totalLoaded = 0; //hold number of files already loaded
 
 var TitleView = new Container(); //hold several graphics within in order ot display them together
 
+event.trigger(Main());
 //Main function
 function Main()
 {
@@ -44,17 +45,16 @@ function Main()
 
 	//place an array of files we want to load
 	manifest = [
-
-			{src: "<%= asset_path('bg.png') %>", id:"bg"},
-			{src: "<%= asset_path('main.png') %>", id:"main"},
-			{src: "<%= asset_path('startB.png') %>", id:"startB"},
-			{src: "<%= asset_path('creditsB.png') %>", id:"creditsB"},
-			{src: "<%= asset_path('credits.png') %>", id:"credits"},
-			{src: "<%= asset_path('paddle.png') %>", id:"cpu"},
-			{src: "<%= asset_path('paddle.png') %>", id:"player"},
-			{src: "<%= asset_path('ball.png') %>", id:"ball"},
-			{src: "<%= asset_path('win.png') %>", id:"win"},
-			{src: "<%= asset_path('lose.png') %>", id:"lose"},
+			{src: "bg.png", id:"bg"},
+			{src:"main.png", id:"main"},
+			{src:"startB.png", id:"startB"},
+			{src:"creditsB.png", id:"creditsB"},
+			{src:"credits.png", id:"credits"},
+			{src:"paddle.png", id:"cpu"},
+			{src:"paddle.png", id:"player"},
+			{src:"ball.png", id:"ball"},
+			{src:"win.png", id:"win"},
+			{src:"lose.png", id:"lose"},
 
 	];
 		//configure the preloader object
@@ -77,23 +77,17 @@ function handleProgress(event)
 function handleComplete(event)
 {
 	//triggered when all loading is complete
+
 }
 
 function handleFileLoad(event) 
 {
-         //triggered when an individual file completes loading
-             
-         //switch(event.type)
-         //{
-           // case PreloadJS.IMAGE:
-            //image loaded
+
              var img = new Image();
               img.src = event.src;
               img.onload = handleLoadCompelete;
               window[event.id] = new Bitmap(img);
-           // break;
- 
-         //}
+
 }
 
 function handleLoadCompelete(event)
