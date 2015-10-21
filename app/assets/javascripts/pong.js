@@ -31,6 +31,7 @@ var preloader; //contains preloader object
 var manifest; //hold al ist of files that need to be loaded
 var totalLoaded = 0; //hold number of files already loaded
 
+
 var TitleView = new Container(); //hold several graphics within in order ot display them together
 
 //Main function
@@ -44,7 +45,7 @@ function Main()
 
 	//place an array of files we want to load
 	manifest = [
-			{src: "bg.png", id:"bg"},
+			{src:"bg.png", id:"bg"},
 			{src:"main.png", id:"main"},
 			{src:"startB.png", id:"startB"},
 			{src:"creditsB.png", id:"creditsB"},
