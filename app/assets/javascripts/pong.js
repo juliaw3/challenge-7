@@ -33,7 +33,6 @@ var totalLoaded = 0; //hold number of files already loaded
 
 var TitleView = new Container(); //hold several graphics within in order ot display them together
 
-event.trigger(Main());
 //Main function
 function Main()
 {

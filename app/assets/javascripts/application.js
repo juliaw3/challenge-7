@@ -16,6 +16,7 @@
 
 //= require Aeasel
 //= require Btween
-//= require Csound
 //= require Dpreload
 //= require Emin
+
+//= require pong
